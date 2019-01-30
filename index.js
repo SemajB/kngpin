@@ -1,7 +1,16 @@
 
 (function(window, _) {
   window.kngpin = window.kngpin || {
-    numz: {},
+    numz: {
+      
+      getDistance(pointA, pointB){
+        const
+        distanceX = pointB.x - pointA.x,
+        distanceY = pointB.y - pointA.y;
+        return Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+      }
+      
+    },
     phyz: {
       /**
        * Returns an Object with basic properties utilized in a 
@@ -25,7 +34,7 @@
        * force of impact of a collision.
        * @return {Object} The body.
        */
-      makeBody: function(type, {
+      makeBody(type, {
         velocityX = 0,
         velocityY = 0,
         rotationalVelocity = 0,
@@ -59,6 +68,7 @@
             // template method //
           }
         };
+        
       },
     },
   };
