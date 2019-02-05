@@ -8,6 +8,14 @@
         distanceX = pointB.x - pointA.x,
         distanceY = pointB.y - pointA.y;
         return Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+      },
+      
+      degreesToRadians(degrees){
+        return degrees * Math.PI/180 ;
+      },
+      
+      radiansToDegress(radians){
+        return radians * 180/Math.PI ;
       }
       
     },
