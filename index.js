@@ -24,6 +24,7 @@
           distanceY = pointB.y - pointA.y,
           radians = Math.atan2(distanceY, distanceX),
           degrees = radians * 180/Math.PI
+        return degrees;
       }
       
     },
